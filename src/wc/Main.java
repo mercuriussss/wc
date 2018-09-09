@@ -20,10 +20,12 @@ public class Main {
             if(cm[0].equals("-e")){
                 break;
             }
+            else if(cm.length!=2){
+                System.out.println("输入命令有误，请重新输入！");
+            }
             else{
                 Count.fileRead(cm);
             }
-
         }
     }
 
