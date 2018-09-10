@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96e58f50-25a4-439c-b971-a6584d19cd81" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/wc/CheckOut.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/wc/Count.java" afterPath="$PROJECT_DIR$/src/wc/Count.java" />
-      <change beforePath="$PROJECT_DIR$/src/wc/Main.java" afterPath="$PROJECT_DIR$/src/wc/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,8 +27,8 @@
       <file leaf-file-name="Count.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/wc/Count.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="25" column="58" lean-forward="true" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
+            <state relative-caret-position="698">
+              <caret line="45" column="42" lean-forward="false" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,8 +71,8 @@
         <option value="$PROJECT_DIR$/src/wc/FileRead.java" />
         <option value="$PROJECT_DIR$/src/wc/Search.java" />
         <option value="$PROJECT_DIR$/src/wc/CheckOut.java" />
-        <option value="$PROJECT_DIR$/src/wc/Count.java" />
         <option value="$PROJECT_DIR$/src/wc/Main.java" />
+        <option value="$PROJECT_DIR$/src/wc/Count.java" />
       </list>
     </option>
   </component>
@@ -300,12 +296,12 @@
       <option name="presentableId" value="Default" />
       <updated>1536504394578</updated>
       <workItem from="1536504398196" duration="4424000" />
-      <workItem from="1536555326146" duration="12964000" />
+      <workItem from="1536555326146" duration="14513000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17388000" />
+    <option name="totallyTimeSpent" value="18937000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -389,8 +385,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/wc/Count.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="25" column="58" lean-forward="true" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
+        <state relative-caret-position="698">
+          <caret line="45" column="42" lean-forward="false" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
