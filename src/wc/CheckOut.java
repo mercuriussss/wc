@@ -1,25 +1,59 @@
 package wc;
 
 import java.io.*;
+import java.util.Arrays;
 
 public class CheckOut {
 
-    public static boolean check(String[] args){
-        String cm =args[0];
-        String filePath = args[1];
-        File file = new File(filePath);
-        if(cm.length()!=2){
-            System.out.println("输入命令有误，请重新输入！");
-            return false;
-        }
+    String[] cms;
+    File file;
+    String[] cmCol = {"-c","-w","-l","-s","-a"}; //指令数组，用于检验输入指令是否正确
 
-        //判断文件是否存在
-        if(file.isFile()&&file.exists()){
+    public CheckOut(String[] command,File file){
+        cms = command.clone();
+        this.file = file;
+    }
+
+    public boolean checkFile() {
+
+        if (file.isFile() && file.exists()) {
             return true;
-        }else{
+        } else {
             System.out.println("该文件不存在！请检查路径是否输入错误！");
             return false;
         }
     }
+
+    public boolean checkCommand(){
+        for(String cm : cms){
+            if(!Arrays.asList(cmCol).contains(cm)){
+                System.out.println("输入命令有误，请重新输入！");
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static boolean checkFile(File file){
+        if(file.isFile()&&file.exists()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public static boolean checkFileDir(File file){
+        if(file.isDirectory()){
+            if(file.list().length>0){
+                return true;
+            }else{
+                System.out.println("该目录为空目录！");
+                return false;
+            }
+        }else{
+            return false;
+        }
+    }
+
 }
 

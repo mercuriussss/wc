@@ -1,6 +1,8 @@
 package wc;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -15,29 +17,34 @@ public class Main {
         while(true){
             System.out.println("\n请输入相应命令：");
             Scanner sc = new Scanner(System.in);
-            //按空格切割成字符串数组
-            String command[] = sc.nextLine().toString().split("\\s");
+            //按空格切割成字符串数组，并将其分为指令组和文件路径
+            String commands[] = sc.nextLine().toString().split("\\s");
+            String cms[] = Arrays.copyOf(commands,commands.length-1);
+            String filePath = commands[commands.length-1];
+            File file = new File(filePath);
 
-            if(command[0].equals("-e")){
+            //退出
+            if(cms[0].equals("-e")){
                 break;
             }
-            else{
-                if(CheckOut.check(command)) {
-                    Count count = new Count(command[1]);
-                    switch (command[0]) {
-                        case "-c":
-                            count.charNumber();
-                            break;
-                        case "-w":
-                            count.wordNumber();
-                            break;
-                        case "-l":
-                            count.lineNumber();
-                            break;
-                        default:
-                            System.out.println("输入功能有误");
-                            break;
+            //递归查询
+            else if(cms[0].equals("-s")) {
+                //检验输入指令除了‘-s’外，还含有其他功能指令
+                if(cms.length>1){
+                    String newcms[] = Arrays.copyOfRange(cms,1,cms.length);
+                    if(CheckOut.checkFileDir(file)) {
+                        RecFile.RecF(newcms, file);
                     }
+                }else{
+                    System.out.println("输入指令有误，请重新输入！");
+                }
+            }
+            //普通查询
+            else{
+                CheckOut co = new CheckOut(cms,file);
+                if(co.checkCommand()&&co.checkFile()) {
+                    Count count = new Count(cms,file);
+                    count.runFunc();
                 }else{
                     continue;
                 }
