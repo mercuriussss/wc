@@ -43,8 +43,12 @@ public class Main {
             else{
                 CheckOut co = new CheckOut(cms,file);
                 if(co.checkCommand()&&co.checkFile()) {
-                    Count count = new Count(cms,file);
-                    count.runFunc();
+                    if(CheckOut.checkCodeFile(file)) {
+                        Count count = new Count(cms, file);
+                        count.runFunc();
+                    }else{
+                        System.out.println("该文件不是代码文件，请重新输入！");
+                    }
                 }else{
                     continue;
                 }

@@ -55,5 +55,14 @@ public class CheckOut {
         }
     }
 
+    public static boolean checkCodeFile(File file){
+        String str = file.getName();
+        if(str.endsWith(".java")||str.endsWith(".cpp")||str.endsWith(".c")){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 }
 
